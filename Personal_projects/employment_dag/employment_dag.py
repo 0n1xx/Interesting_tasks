@@ -24,7 +24,7 @@ def employment_dag():
 
     @task
     def extract_from_excel():
-        sheet_id = "1WSxfMdjzHBaIa7AzKzjOL5gQCz595ytpUAPmbBvrGOg"
+        sheet_id = "excel_value"
         df = pd.read_csv(f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv")
         df.rename(
             columns={"Дата старта": "Start_date", "Дата оффера": "Contract_date", "ФИО": "Full_name", "Пол": "Gender",
